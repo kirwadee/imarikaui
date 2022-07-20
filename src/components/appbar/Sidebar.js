@@ -16,15 +16,19 @@ const Sidebar = () => {
 
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
-    const handleDrawerToggle = () => {
-      setMobileOpen(!mobileOpen);
+    const handleCloseDrawer = () => {
+      setMobileOpen(false);
     };
+
+    const openDrawer = () => {
+      setMobileOpen(true)
+    }
 
   return (
    <React.Fragment>
     <Drawer
       anchor='left'
-      onClose={handleDrawerToggle}
+      onClose={handleCloseDrawer}
       open={mobileOpen}
       variant='temporary'
     >

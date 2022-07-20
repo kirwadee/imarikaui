@@ -26,7 +26,7 @@ const style = {
 
 
 
-const Header = ({handleDrawerToggle}) => {
+const Header = ({openDrawer}) => {
     const theme = useTheme();
 
     const [open, setOpen] = React.useState(false);
@@ -53,7 +53,7 @@ const Header = ({handleDrawerToggle}) => {
                   sx={{mr:2,display:{md: 'block', lg:'none'}}}
                 >
                     <Button
-                      onClick={() => handleDrawerToggle()}
+                      onClick={() => openDrawer()}
                       aria-label='Menu'
                       variant='outlined'
                       sx={{
