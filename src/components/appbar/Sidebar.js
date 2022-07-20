@@ -63,7 +63,7 @@ const Sidebar = () => {
                     </IconButton>
                 </Link>
             </Box>
-            <Box paddingX={2} paddingY={2} onClick={handleDrawerToggle}>
+            <Box paddingX={2} paddingY={2} onClick={handleCloseDrawer}>
                 <CustomButton 
                     href='#home'
                     icon={<HomeIcon />}

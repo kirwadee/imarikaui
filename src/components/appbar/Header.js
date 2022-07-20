@@ -53,7 +53,7 @@ const Header = ({openDrawer}) => {
                   sx={{mr:2,display:{md: 'block', lg:'none'}}}
                 >
                     <Button
-                      onClick={() => openDrawer()}
+                      onClick={openDrawer}
                       aria-label='Menu'
                       variant='outlined'
                       sx={{
