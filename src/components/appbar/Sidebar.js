@@ -10,22 +10,21 @@ import ListIcon from '@mui/icons-material/FormatListBulleted';
 
 
 
-const Sidebar = ({ mobileOpen, handleDrawerToggle}) => {
+const Sidebar = () => {
 
     const theme = useTheme()
 
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-    
+    const [mobileOpen, setMobileOpen] = React.useState(false);
 
-    const handleCloseNavMenu = () => {
-      setAnchorElNav(null);
+    const handleDrawerToggle = () => {
+      setMobileOpen(!mobileOpen);
     };
 
   return (
    <React.Fragment>
     <Drawer
       anchor='left'
-      onClose={()=> handleDrawerToggle()}
+      onClose={handleDrawerToggle}
       open={mobileOpen}
       variant='temporary'
     >

@@ -26,7 +26,7 @@ const style = {
 
 
 
-const Header = () => {
+const Header = ({handleDrawerToggle}) => {
     const theme = useTheme();
 
     const [open, setOpen] = React.useState(false);
@@ -34,11 +34,7 @@ const Header = () => {
     const handleClose = () => setOpen(false);
 
 
-    const [mobileOpen, setMobileOpen] = useState(false);
-
-    const handleDrawerToggle = () => {
-      setMobileOpen(!mobileOpen);
-    };
+    
 
   return (
     <React.Fragment>
