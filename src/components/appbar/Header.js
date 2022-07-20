@@ -47,10 +47,10 @@ const Header = ({onSidebarOpen}) => {
             backgroundColor:theme.palette.background.default
          }}
         >
-            <Toolbar sx={{minHeight:70}}>
+            <Toolbar sx={{minHeight:100}}>
                 <Box 
                   alignItems='center'
-                  sx={{mr:2,display:{md: 'block', lg:'none'}}}
+                  sx={{mr:12,display:{md: 'block', lg:'none'}}}
                 >
                     <Button
                       onClick={onSidebarOpen}
@@ -73,13 +73,13 @@ const Header = ({onSidebarOpen}) => {
                           variant='rounded'
                           sx={{
                             backgroundColor:Colors.primary,
-                            height:50,
-                            width:50,
+                            height:100,
+                            width:100,
                             marginRight:'15px',
                 
                           }}
                         >
-                            <img src="/images/banner/IMG-20220628-WA0025.jpg" style={{height:50, width:50}}/>
+                            <img src="/images/banner/IMG-20220628-WA0025.jpg" style={{height:100, width:100}}/>
                         </Avatar>
                         <Typography 
                           variant='h4'

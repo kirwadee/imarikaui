@@ -74,7 +74,7 @@ const PeaceSlider = () => {
             exit:200
         }}
       >
-        <Box display={"flex"} justifyContent="center" alignItems={"center"}>
+        <Box >
             <MessageText>
                 {messages[messageIndex]}
             </MessageText>

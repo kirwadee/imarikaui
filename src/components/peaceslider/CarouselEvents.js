@@ -1,11 +1,18 @@
-import { Paper, styled, Typography } from '@mui/material';
+import { Box, styled, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
 import Carousel from 'react-material-ui-carousel';
 import { useSelector, useDispatch } from 'react-redux';
 import { getEvents } from '../../features/events/eventSlice';
 
-const CarouselContainer = styled(Carousel)(({theme})=>({
-    
+const CarouselContainer = styled(Box)(({theme})=>({
+    height:"40px",
+    backgroundColor:"white",
+    marginBottom:"20px",
+    padding:"20px",
+    [theme.breakpoints.down('md')]:{
+        marginBottom:"180px",
+        
+    }
 }))
 
 
@@ -18,14 +25,16 @@ function CarouselEvents(props) {
 
     useEffect(()=>{
         dispatch(getEvents())
-    },[])
+    },[dispatch])
 
     return (
-        <Carousel>
+        <CarouselContainer>
+        <Carousel style={{height:"100%"}}>
             {evs.map((item, i) => (
                 <Item key={i} {...item} />
             ))}
         </Carousel>
+        </CarouselContainer>
     );
 }
 
@@ -33,18 +42,19 @@ export default CarouselEvents
 
 const Item = ({title, timelines}) => {
     return (
-        <Paper
+        <Box
          sx={{
             display:"flex",
             justifyContent:"center",
             alignItems:"center",
-            padding:"20px"
+            height:"100%"
+
          }}
         >
            <Typography
              sx={{
                 fontFamily:'"Montez", "cursive"',
-                fontSize:"25px",
+                fontSize:"20px",
                 fontWeight:"bold",
                 marginRight:"10px"
              }}
@@ -54,13 +64,13 @@ const Item = ({title, timelines}) => {
             <Typography
              sx={{
                 fontFamily:'"Montez", "cursive"',
-                fontSize:"25px",
+                fontSize:"20px",
                 fontWeight:"bold"
              }}
             >
                 {timelines}
             </Typography>
 
-        </Paper>
+        </Box>
     );
 };

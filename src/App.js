@@ -24,11 +24,9 @@ function App() {
   const handleSidebarOpen = () => {
     setOpenSidebar(true);
    };
-   const handleSidebarClose = () => {
-    setOpenSidebar(false);
-};
+   
 
-const open = isLg ? false : openSidebar;
+
 
 
   AOS.init({
@@ -36,7 +34,7 @@ const open = isLg ? false : openSidebar;
 });
 
   useEffect(()=>{
-     document.title="React Material UI v5"
+     document.title="Imarika Peace And Mediation Initiative"
   },[])
 
 
@@ -52,10 +50,11 @@ const open = isLg ? false : openSidebar;
   >
 
    <Header onSidebarOpen={handleSidebarOpen} />
-   <Sidebar
-      onClose={handleSidebarClose}
-      open={open}
+   { !isLg &&<Sidebar
+      onClose={() => setOpenSidebar(false)}
+      open={openSidebar}
     />
+    }
    <CarouselEvents />
    <Banner />
    <About />
