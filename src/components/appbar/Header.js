@@ -26,7 +26,7 @@ const style = {
 
 
 
-const Header = ({openDrawer}) => {
+const Header = ({onSidebarOpen}) => {
     const theme = useTheme();
 
     const [open, setOpen] = React.useState(false);
@@ -53,7 +53,7 @@ const Header = ({openDrawer}) => {
                   sx={{mr:2,display:{md: 'block', lg:'none'}}}
                 >
                     <Button
-                      onClick={openDrawer}
+                      onClick={onSidebarOpen}
                       aria-label='Menu'
                       variant='outlined'
                       sx={{

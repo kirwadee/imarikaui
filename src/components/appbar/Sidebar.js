@@ -10,26 +10,16 @@ import ListIcon from '@mui/icons-material/FormatListBulleted';
 
 
 
-const Sidebar = () => {
+const Sidebar = ({open, onClose}) => {
 
     const theme = useTheme()
-
-    const [mobileOpen, setMobileOpen] = React.useState(false);
-
-    const handleCloseDrawer = () => {
-      setMobileOpen(false);
-    };
-
-    const openDrawer = () => {
-      setMobileOpen(true)
-    }
 
   return (
    <React.Fragment>
     <Drawer
       anchor='left'
-      onClose={handleCloseDrawer}
-      open={mobileOpen}
+      onClose={onClose}
+      open={open}
       variant='temporary'
     >
         <Box sx={{height:'100%', padding:1}}>
@@ -68,7 +58,7 @@ const Sidebar = () => {
                     href='#home'
                     icon={<HomeIcon />}
                     text='Home'
-                    onClick={handleCloseDrawer}
+                    onClick={onClose}
                   
                 />
                  <Box paddingY={1} >
@@ -76,7 +66,7 @@ const Sidebar = () => {
                        href='#about'
                        icon={<InfoIcon />}
                        text='About'
-                       onClick={handleCloseDrawer}
+                       onClick={onClose}
                      />
                  </Box>
                  <Box paddingY={1} >
@@ -84,7 +74,7 @@ const Sidebar = () => {
                        href='#projects'
                        icon={<ListIcon />}
                        text='Projects' 
-                       onClick={handleCloseDrawer}
+                       onClick={onClose}
                      />
                  </Box>
                  <Box paddingY={1} >
@@ -92,7 +82,7 @@ const Sidebar = () => {
                        href='#gallery'
                        icon={<DevicesIcon />}
                        text='Gallery'
-                       onClick={handleCloseDrawer}
+                       onClick={onClose}
                      />
                  </Box>
                  <Box paddingY={1} >
@@ -100,7 +90,7 @@ const Sidebar = () => {
                      href='#contact'
                      icon={<EmailIcon />}
                      text='Contact'
-                     onClick={handleCloseDrawer}
+                     onClick={onClose}
                      />
                  </Box>
             </Box>
