@@ -63,39 +63,44 @@ const Sidebar = () => {
                     </IconButton>
                 </Link>
             </Box>
-            <Box paddingX={2} paddingY={2} onClick={handleCloseDrawer}>
+            <Box paddingX={2} paddingY={2} >
                 <CustomButton 
                     href='#home'
                     icon={<HomeIcon />}
                     text='Home'
+                    onClick={handleCloseDrawer}
                   
                 />
-                 <Box paddingY={1} onClick={handleCloseDrawer}>
+                 <Box paddingY={1} >
                     <CustomButton 
                        href='#about'
                        icon={<InfoIcon />}
                        text='About'
+                       onClick={handleCloseDrawer}
                      />
                  </Box>
-                 <Box paddingY={1} onClick={handleCloseDrawer}>
+                 <Box paddingY={1} >
                     <CustomButton 
                        href='#projects'
                        icon={<ListIcon />}
                        text='Projects' 
+                       onClick={handleCloseDrawer}
                      />
                  </Box>
-                 <Box paddingY={1} onClick={handleCloseDrawer}>
+                 <Box paddingY={1} >
                     <CustomButton 
                        href='#gallery'
                        icon={<DevicesIcon />}
                        text='Gallery'
+                       onClick={handleCloseDrawer}
                      />
                  </Box>
-                 <Box paddingY={1} onClick={handleCloseDrawer}>
+                 <Box paddingY={1} >
                     <CustomButton 
                      href='#contact'
                      icon={<EmailIcon />}
                      text='Contact'
+                     onClick={handleCloseDrawer}
                      />
                  </Box>
             </Box>
