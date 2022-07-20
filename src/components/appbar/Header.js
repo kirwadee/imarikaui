@@ -53,7 +53,7 @@ const Header = ({handleDrawerToggle}) => {
                   sx={{mr:2,display:{md: 'block', lg:'none'}}}
                 >
                     <Button
-                      onClick={handleDrawerToggle}
+                      onClick={() => handleDrawerToggle()}
                       aria-label='Menu'
                       variant='outlined'
                       sx={{
