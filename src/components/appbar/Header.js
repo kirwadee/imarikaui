@@ -5,7 +5,7 @@ import  MenuIcon  from '@mui/icons-material/Menu';
 import "@fontsource/montez"
 import CustomButton from './CustomButton';
 import EmailIcon from '@mui/icons-material/EmailOutlined';
-import HomeIcon from '@mui/icons-material/Home';
+  import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/InfoOutlined';
 import ListIcon from '@mui/icons-material/FormatListBulleted';
 import { Colors } from '../../styles/theme';
@@ -14,7 +14,7 @@ import { Close } from '@mui/icons-material';
 
 const style = {
   position: 'absolute',
-  top: '50%',
+  top: '50%', 
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 400,
@@ -26,12 +26,19 @@ const style = {
 
 
 
-const Header = ({ onSidebarOpen }) => {
+const Header = () => {
     const theme = useTheme();
 
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+
+
+    const [mobileOpen, setMobileOpen] = useState(false);
+
+    const handleDrawerToggle = () => {
+      setMobileOpen(!mobileOpen);
+    };
 
   return (
     <React.Fragment>
@@ -47,10 +54,10 @@ const Header = ({ onSidebarOpen }) => {
             <Toolbar sx={{minHeight:70}}>
                 <Box 
                   alignItems='center'
-                  sx={{display:{md: 'block', lg:'none'}}}
+                  sx={{mr:2,display:{md: 'block', lg:'none'}}}
                 >
                     <Button
-                      onClick={()=>onSidebarOpen()}
+                      onClick={handleDrawerToggle}
                       aria-label='Menu'
                       variant='outlined'
                       sx={{
@@ -163,7 +170,7 @@ const Header = ({ onSidebarOpen }) => {
                             <Close onClick={handleClose} />
                           </Box>
                           <Box display={'flex'} justifyContent='center' >
-                          <Typography align='center' variant="h6" component="h2" marginRight={2}>
+                           <Typography align='center' variant="h6" component="h2" marginRight={2}>
                            PAYBILL NUMBER
                           </Typography>
                           <Typography variant='h6' component={'h2'} fontWeight='bold' >
@@ -171,14 +178,22 @@ const Header = ({ onSidebarOpen }) => {
                           </Typography>
                           </Box>
                           <Box display={'flex'} justifyContent='center' >
+                           <Typography align='center' variant="h6" component="h2" marginRight={2}>
+                           Vooma TILL NUMBER
+                          </Typography>
+                          <Typography variant='h6' component={'h2'} fontWeight='bold' >
+                           5892180
+                          </Typography>
+                          </Box>
+                          <Box display={'flex'} justifyContent='center' >
                           <Typography align='center' variant="h6" component="h2" marginRight={2}>
-                          BANK ACCOUNT NUMBER
+                          BANK ACCOUNT NUMBER(KCB)
                           </Typography>
                           <Typography variant='h6' component={'h2'} fontWeight='bold' >
                            1296526690
                           </Typography>
                           </Box>
-                          <Typography align='center' marginTop={3} >
+                          <Typography align='center' marginTop={3} sx={{color:'green'}} >
                             Your gift today can provide lifesaving relief
                             </Typography>
                         </Box>

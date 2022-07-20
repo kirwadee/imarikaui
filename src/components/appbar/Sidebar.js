@@ -10,16 +10,23 @@ import ListIcon from '@mui/icons-material/FormatListBulleted';
 
 
 
-const Sidebar = ({open, onClose}) => {
+const Sidebar = ({ mobileOpen, handleDrawerToggle}) => {
 
     const theme = useTheme()
+
+    const [anchorElNav, setAnchorElNav] = React.useState(null);
+    
+
+    const handleCloseNavMenu = () => {
+      setAnchorElNav(null);
+    };
 
   return (
    <React.Fragment>
     <Drawer
       anchor='left'
-      onClose={()=> onClose()}
-      open={open}
+      onClose={()=> handleDrawerToggle()}
+      open={mobileOpen}
       variant='temporary'
     >
         <Box sx={{height:'100%', padding:1}}>
@@ -53,35 +60,35 @@ const Sidebar = ({open, onClose}) => {
                     </IconButton>
                 </Link>
             </Box>
-            <Box paddingX={2} paddingY={2}>
+            <Box paddingX={2} paddingY={2} onClick={handleDrawerToggle}>
                 <CustomButton 
                     href='#home'
                     icon={<HomeIcon />}
                     text='Home'
                   
                 />
-                 <Box paddingY={1}>
+                 <Box paddingY={1} onClick={handleDrawerToggle}>
                     <CustomButton 
                        href='#about'
                        icon={<InfoIcon />}
                        text='About'
                      />
                  </Box>
-                 <Box paddingY={1}>
+                 <Box paddingY={1} onClick={handleDrawerToggle}>
                     <CustomButton 
                        href='#projects'
                        icon={<ListIcon />}
                        text='Projects' 
                      />
                  </Box>
-                 <Box paddingY={1}>
+                 <Box paddingY={1} onClick={handleDrawerToggle}>
                     <CustomButton 
                        href='#gallery'
                        icon={<DevicesIcon />}
                        text='Gallery'
                      />
                  </Box>
-                 <Box paddingY={1}>
+                 <Box paddingY={1} onClick={handleDrawerToggle}>
                     <CustomButton 
                      href='#contact'
                      icon={<EmailIcon />}

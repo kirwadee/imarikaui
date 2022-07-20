@@ -8,7 +8,7 @@ import { Colors } from '../../styles/theme'
 const BannerButtons = () => {
     const theme = useTheme()
     const isAboveMd = useMediaQuery(theme.breakpoints.up('md'))
-  return (
+  return (    
     <React.Fragment>
         <Box 
           display='flex'

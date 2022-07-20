@@ -1,4 +1,4 @@
-import React from 'react';
+        import React from 'react';
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
@@ -131,7 +131,7 @@ const Footer = () => {
                      >
                         <MyLocationIcon />
                         <Typography marginLeft={2}>
-                        P.O.BOX 72 - 30400, MARIGAT - KENYA 
+                        P.O.BOX 72 - 30400,MARIGAT - KENYA 
                      </Typography>
                      </Box>
                      
