@@ -70,28 +70,28 @@ const Sidebar = () => {
                     text='Home'
                   
                 />
-                 <Box paddingY={1} onClick={handleDrawerToggle}>
+                 <Box paddingY={1} onClick={handleCloseDrawer}>
                     <CustomButton 
                        href='#about'
                        icon={<InfoIcon />}
                        text='About'
                      />
                  </Box>
-                 <Box paddingY={1} onClick={handleDrawerToggle}>
+                 <Box paddingY={1} onClick={handleCloseDrawer}>
                     <CustomButton 
                        href='#projects'
                        icon={<ListIcon />}
                        text='Projects' 
                      />
                  </Box>
-                 <Box paddingY={1} onClick={handleDrawerToggle}>
+                 <Box paddingY={1} onClick={handleCloseDrawer}>
                     <CustomButton 
                        href='#gallery'
                        icon={<DevicesIcon />}
                        text='Gallery'
                      />
                  </Box>
-                 <Box paddingY={1} onClick={handleDrawerToggle}>
+                 <Box paddingY={1} onClick={handleCloseDrawer}>
                     <CustomButton 
                      href='#contact'
                      icon={<EmailIcon />}
